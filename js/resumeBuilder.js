@@ -81,20 +81,26 @@ This is empty on purpose! Your code to build the resume will go here.
  var projects = {
    projects: [
      {
-       title: "",
-       dates: "",
+       title: "Escenic Widget Framework",
+       dates: "June 2009 - December 2011",
        description: "",
        images: []
      },
      {
-       title: "",
-       dates: "",
+       title: "Escenic Demo Kit",
+       dates: "June 2009 - December 2011",
        description: "",
        images: []
      },
      {
-       title: "",
-       dates: "",
+       title: "Warehouse Money",
+       dates: "January 2015 - October 2015",
+       description: "",
+       images: []
+     },
+     {
+       title: "INGD Orange One",
+       dates: "November 2015 - May 2016",
        description: "",
        images: []
      }
