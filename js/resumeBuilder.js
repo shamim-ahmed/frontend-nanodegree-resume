@@ -195,11 +195,12 @@ function displayAcademicQualifications() {
   var educationElem = $("#education");
   var i;
 
+  /* degrees */
   for (i = 0; i < education.schools.length; i++) {
     educationElem.append(HTMLschoolStart);
 
     var school = education.schools[i];
-    var schoolName = HTMLschoolName.replace("%data%", school.name);
+    var schoolName = HTMLschoolName.replace("#", school.url).replace("%data%", school.name);
     var schoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
     var schoolDates = HTMLschoolDates.replace("%data%", school.dates);
     var schoolLocation = HTMLschoolLocation.replace("%data%", school.location);
@@ -220,6 +221,20 @@ function displayAcademicQualifications() {
 
     var educationEntry = $(".education-entry:last", educationElem);
     educationEntry.append(schoolName + schoolDegree).append(schoolDates).append(schoolLocation).append(schoolMajor);
+  }
+
+  /* online courses */
+  educationElem.append(HTMLonlineClasses);
+
+  for (i = 0; i < education.onlineCourses.length; i++) {
+    var onlineCourse = education.onlineCourses[i];
+    educationElem.append(HTMLschoolStart);
+
+    var onlineTitle = HTMLonlineTitle.replace("#", onlineCourse.url).replace("%data%", onlineCourse.title);
+    var onlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
+    var onlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
+    var onlineUrl = HTMLonlineURL.replace("#", onlineCourse.url).replace("%data%", onlineCourse.url);
+    $(".education-entry:last", educationElem).append(onlineTitle + onlineSchool).append(onlineDates).append("<br>");
   }
 }
 
