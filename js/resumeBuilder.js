@@ -34,7 +34,7 @@ var education = {
       "name": "Macquarie University",
       "location": "Sydney, Australia",
       "degree": "Master of Information Technology",
-      "majors": ["Information Technology", "Web Technologies"],
+      "majors": ["Web Technologies"],
       "dates": "Jaunary 2012 - April 2013",
       "url": "http://www.mq.edu.au"
     }
@@ -53,7 +53,7 @@ var education = {
       "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }
   ],
-  "display": function() {}
+  "display": displayAcademicQualifications
 };
 
 /* work object */
@@ -108,6 +108,7 @@ var projects = {
   "display": displayProjects
 };
 
+/* the logic starts here */
 function displayBiographicalInfo() {
   /* name and role */
   var headerName = HTMLheaderName.replace("%data%", bio.name);
@@ -148,6 +149,7 @@ function displayBiographicalInfo() {
 function displayWorkExperience() {
   /* work experience */
   var workExperienceElem = $("#workExperience");
+  var i;
 
   for (i = 0; i < work.jobs.length; i++) {
     workExperienceElem.append(HTMLworkStart);
@@ -168,6 +170,7 @@ function displayWorkExperience() {
 function displayProjects() {
   /* projects */
   var projectsElem = $("#projects");
+  var i;
 
   for (i = 0; i < projects.projects.length; i++) {
     projectsElem.append(HTMLprojectStart);
@@ -188,7 +191,39 @@ function displayProjects() {
   }
 }
 
-/* the logic starts here */
+function displayAcademicQualifications() {
+  var educationElem = $("#education");
+  var i;
+
+  for (i = 0; i < education.schools.length; i++) {
+    educationElem.append(HTMLschoolStart);
+
+    var school = education.schools[i];
+    var schoolName = HTMLschoolName.replace("%data%", school.name);
+    var schoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+    var schoolDates = HTMLschoolDates.replace("%data%", school.dates);
+    var schoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+
+    var majorStr = "";
+    var j;
+
+    for (j = 0; j < school.majors.length; j++) {
+      majorStr += school.majors[j] + ", ";
+    }
+
+    var n = majorStr.length;
+    if (n > 0) {
+      majorStr = majorStr.slice(0, n - 2);
+    }
+
+    var schoolMajor = HTMLschoolMajor.replace("%data%", majorStr);
+
+    var educationEntry = $(".education-entry:last", educationElem);
+    educationEntry.append(schoolName + schoolDegree).append(schoolDates).append(schoolLocation).append(schoolMajor);
+  }
+}
+
 bio.display();
 work.display();
 projects.display();
+education.display();
