@@ -238,7 +238,13 @@ function displayAcademicQualifications() {
   }
 }
 
+function displayMap() {
+  var googleMapApiKey = "AIzaSyArATM9PDyhwaB3tH18smKnmxI6OsrP7MM";
+  $("#mapDiv").append(googleMap);
+}
+
 bio.display();
 work.display();
 projects.display();
 education.display();
+displayMap();
