@@ -4,19 +4,19 @@ This is empty on purpose! Your code to build the resume will go here.
 
  /* bio object */
  var bio = {
-   name: "Shamim Ahmed",
-   role: "Software Developer",
-   contacts: {
-     mobile: "0450289581",
-     email: "shamim.buet.99@gmail.com",
-     github: "shamim-ahmed",
-     twitter: "dreamsmith7",
-     location: "Sydney, Australia"
+   "name": "Shamim Ahmed",
+   "role": "Software Developer",
+   "contacts": {
+     "mobile": "0450289581",
+     "email": "shamim.buet.99@gmail.com",
+     "github": "shamim-ahmed",
+     "twitter": "dreamsmith7",
+     "location": "Sydney, Australia"
    },
-   welcmeMessage: "Welcome",
-   skills: ["Java", "J2EE", "Python", "HTML5", "CSS3"],
-   biopic: "https://avatars0.githubusercontent.com/u/3603688",
-   display: function() {}
+   "welcmeMessage": "Welcome",
+   "skills": ["Java", "J2EE", "Python", "HTML5", "CSS3"],
+   "biopic": "images/shamim.jpg",
+   "display": function() {}
  };
 
  /* education object */
@@ -107,3 +107,21 @@ This is empty on purpose! Your code to build the resume will go here.
    ],
    display: function() {}
  };
+
+/* the logic starts here */
+
+/* name and role */
+var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
+var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
+
+$("#header").prepend(formattedHeaderRole);
+$("#header").prepend(formattedHeaderName);
+
+/* contact details */
+var mobileItem = HTMLcontactGeneric.replace("%contact%", "Mobile").replace("%data%", bio.contacts.mobile);
+var emailItem = HTMLcontactGeneric.replace("%contact%", "Email").replace("%data%", bio.contacts.email);
+var githubItem = HTMLcontactGeneric.replace("%contact%", "GitHub").replace("%data%", bio.contacts.github);
+var twitterItem = HTMLcontactGeneric.replace("%contact%", "Twitter").replace("%data%", bio.contacts.twitter);
+var locationItem = HTMLcontactGeneric.replace("%contact%", "Location").replace("%data%", bio.contacts.location);
+
+$("#topContacts").append(mobileItem).append(emailItem).append(githubItem).append(twitterItem).append(locationItem);
