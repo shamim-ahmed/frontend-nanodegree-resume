@@ -162,3 +162,20 @@ for (i = 0; i < work.jobs.length; i++) {
   var workEntryElem = $(".work-entry:last", workExperienceElem);
   workEntryElem.append(employerInfo).append(workDates).append(loc).append(description);
 }
+
+/* projects */
+var projectsElem = $("#projects");
+
+for (i = 0; i < projects.projects.length; i++) {
+  projectsElem.append(HTMLprojectStart);
+
+  var project = projects.projects[i];
+  var projectTitle = HTMLprojectTitle.replace("%data%", project.title);
+  var projectDates = HTMLprojectDates.replace("%data%", project.dates);
+  var projectDescription = HTMLprojectDescription.replace("%data%", project.description);
+
+  var projectEntry = $(".project-entry:last", projectsElem);
+  projectEntry.append(projectTitle).append(projectDates).append(projectDescription);
+
+  
+}
