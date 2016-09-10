@@ -14,8 +14,8 @@ This is empty on purpose! Your code to build the resume will go here.
      "location": "Sydney, Australia"
    },
    "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
-   "skills": ["Java", "Python", "HTML5/CSS3"],
-   "biopic": "images/shamim.jpg",
+   "skills": ["Java", "J2EE", "Python", "HTML5/CSS3"],
+   "biopic": "images/shamim.png",
    "display": function() {}
  };
 
