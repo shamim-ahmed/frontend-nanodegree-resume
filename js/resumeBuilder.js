@@ -10,7 +10,7 @@ This is empty on purpose! Your code to build the resume will go here.
      "mobile": "0450289581",
      "email": "shamim.buet.99@gmail.com",
      "github": "shamim-ahmed",
-     "twitter": "dreamsmith7",
+     "twitter": "@dreamsmith7",
      "location": "Sydney, Australia"
    },
    "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
