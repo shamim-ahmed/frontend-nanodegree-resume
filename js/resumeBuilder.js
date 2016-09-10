@@ -118,10 +118,10 @@ $("#header").prepend(formattedHeaderRole);
 $("#header").prepend(formattedHeaderName);
 
 /* contact details */
-var mobileItem = HTMLcontactGeneric.replace("%contact%", "Mobile").replace("%data%", bio.contacts.mobile);
-var emailItem = HTMLcontactGeneric.replace("%contact%", "Email").replace("%data%", bio.contacts.email);
-var githubItem = HTMLcontactGeneric.replace("%contact%", "GitHub").replace("%data%", bio.contacts.github);
-var twitterItem = HTMLcontactGeneric.replace("%contact%", "Twitter").replace("%data%", bio.contacts.twitter);
-var locationItem = HTMLcontactGeneric.replace("%contact%", "Location").replace("%data%", bio.contacts.location);
+var mobileItem = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var emailItem = HTMLemail.replace("%data%", bio.contacts.email);
+var githubItem = HTMLgithub.replace("%data%", bio.contacts.github);
+var twitterItem = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var locationItem = HTMLlocation.replace("%data%", bio.contacts.location);
 
 $("#topContacts").append(mobileItem).append(emailItem).append(githubItem).append(twitterItem).append(locationItem);
