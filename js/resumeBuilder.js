@@ -144,3 +144,21 @@ for (i = 0; i < bio.skills.length; i++) {
   var skill = HTMLskills.replace("%data%", bio.skills[i]);
   skillListElem.append(skill);
 }
+
+/* work experience */
+var workExperienceElem = $("#workExperience");
+
+for (i = 0; i < work.jobs.length; i++) {
+  workExperienceElem.append(HTMLworkStart);
+
+  var job = work.jobs[i];
+  var workEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+  var workTitle = HTMLworkTitle.replace("%data%", job.title);
+  var employerInfo = workEmployer + workTitle;
+  var workDates = HTMLworkDates.replace("%data%", job.dates);
+  var loc = HTMLworkLocation.replace("%data%", job.location);
+  var description = HTMLworkDescription.replace("%data%", job.description);
+
+  var workEntryElem = $(".work-entry:last", workExperienceElem);
+  workEntryElem.append(employerInfo).append(workDates).append(loc).append(description);
+}
