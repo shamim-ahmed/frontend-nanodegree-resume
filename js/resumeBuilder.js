@@ -83,26 +83,26 @@ This is empty on purpose! Your code to build the resume will go here.
      {
        "title": "Escenic Widget Framework",
        "dates": "June 2009 - December 2011",
-       "description": "",
-       "images": []
+       "description": "The goal of this project was to create a set of highly configurable widgets (reusable components with specific functionalities) that would be available on the Escenic platform. These widgets provide an excellent starting point for more elaborate customer projects. As a senior developer, I contributed to both JSP template development and back-end Java development. I also had to be well-versed in various web technologies like HTML, CSS, JavaScript and JQuery. ",
+       "images": ["images/widget-framework/photo_1.jpg", "images/widget-framework/photo_2.jpg"]
      },
      {
        "title": "Escenic Demo Kit",
        "dates": "June 2009 - December 2011",
-       "description": "",
-       "images": []
+       "description": "This project focused on creating a VMware image for the Sales department that would contain Escenic and all other necessary software, along with some demonstrable web publications. My responsibilities in this project included maintaining the JSP templates and scripts used in the VMware image. Periodically, I also had to upgrade the operating system used in the image and update the installation scripts.",
+       "images": ["images/demo-kit/photo_1.jpg", "images/demo-kit/photo_2.jpg"]
      },
      {
        "title": "Warehouse Money",
        "dates": "January 2015 - October 2015",
-       "description": "",
-       "images": []
+       "description": "The aim of this project was to implement a personal banking portal for the Warehouse Group, which is the largest retail group operating in New Zealand. I was involved in both design and implementation phase of the project. I also worked closely with the infrastructure team to ensure that the portal solution is installed and configured properly.",
+       "images": ["images/warehouse-money/photo_1.jpg", "images/warehouse-moeny/photo_2.jpg"]
      },
      {
        "title": "INGD Orange One",
        "dates": "November 2015 - May 2016",
-       "description": "",
-       "images": []
+       "description": "In this project, we customized LendFast (a Sandstone product) so that it can be used to process credit card applications. Our client was ING Direct, which is a subsidiary of the ING Group. This project was a unique experience for me, as I had to work at client premises for a few months as an external consultant. This gave me the opportunity to interact with the client on a day-to-day basis.",
+       "images": ["images/ingd-orange/photo_1.jpg", "images/ingd-orange/photo_2.jpg"]
      }
    ],
    "display": function() {}
@@ -177,5 +177,5 @@ for (i = 0; i < projects.projects.length; i++) {
   var projectEntry = $(".project-entry:last", projectsElem);
   projectEntry.append(projectTitle).append(projectDates).append(projectDescription);
 
-  
+
 }
