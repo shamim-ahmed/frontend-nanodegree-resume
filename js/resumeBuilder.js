@@ -13,8 +13,8 @@ This is empty on purpose! Your code to build the resume will go here.
      "twitter": "dreamsmith7",
      "location": "Sydney, Australia"
    },
-   "welcmeMessage": "Welcome",
-   "skills": ["Java", "J2EE", "Python", "HTML5", "CSS3"],
+   "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
+   "skills": ["Java", "Python", "HTML5/CSS3"],
    "biopic": "images/shamim.jpg",
    "display": function() {}
  };
@@ -114,14 +114,33 @@ This is empty on purpose! Your code to build the resume will go here.
 var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
 var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
 
-$("#header").prepend(formattedHeaderRole);
-$("#header").prepend(formattedHeaderName);
+var headerElem = $("#header");
+
+headerElem.prepend(formattedHeaderRole);
+headerElem.prepend(formattedHeaderName);
 
 /* contact details */
-var mobileItem = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var emailItem = HTMLemail.replace("%data%", bio.contacts.email);
-var githubItem = HTMLgithub.replace("%data%", bio.contacts.github);
-var twitterItem = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-var locationItem = HTMLlocation.replace("%data%", bio.contacts.location);
+var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var email = HTMLemail.replace("%data%", bio.contacts.email);
+var github = HTMLgithub.replace("%data%", bio.contacts.github);
+var twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var loc = HTMLlocation.replace("%data%", bio.contacts.location);
 
-$("#topContacts").append(mobileItem).append(emailItem).append(githubItem).append(twitterItem).append(locationItem);
+$("#topContacts").append(mobile).append(email).append(github).append(twitter).append(loc);
+
+/* biopic and welcome message */
+var biopic = HTMLbioPic.replace("%data%", bio.biopic);
+var welcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+headerElem.append(biopic).append(welcomeMessage);
+
+/* skill set */
+headerElem.append(HTMLskillsStart);
+
+var skillListElem = $("#skills");
+var i;
+
+for (i = 0; i < bio.skills.length; i++) {
+  var skill = HTMLskills.replace("%data%", bio.skills[i]);
+  skillListElem.append(skill);
+}
