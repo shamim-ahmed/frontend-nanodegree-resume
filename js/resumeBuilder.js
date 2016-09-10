@@ -14,7 +14,7 @@ var bio = {
     "location": "Sydney, Australia"
   },
   "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
-  "skills": ["Java", "J2EE", "Python", "HTML5/CSS3"],
+  "skills": ["Java", "J2EE", "Python", "HTML5/CSS3", "JavaScript"],
   "biopic": "images/shamim.png",
   "display": displayBiographicalInfo
 };
@@ -116,8 +116,8 @@ function displayBiographicalInfo() {
 
   var headerElem = $("#header");
 
-  headerElem.prepend(headerName);
   headerElem.prepend(headerRole);
+  headerElem.prepend(headerName);
 
   /* contact details */
   var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
