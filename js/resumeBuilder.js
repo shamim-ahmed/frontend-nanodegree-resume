@@ -53,13 +53,13 @@ var work = {
     "title": "Software Developer",
     "location": "Dhaka, Bangladesh",
     "dates": "January 2007 - December 2011",
-    "description": "I worked as a Java/J2EE developer at Escenic Bangladesh."
+    "description": "I worked as a Java/J2EE developer at Escenic Bangladesh. Initially, I had the opportunity to work in various client-driven projects. Later, I was given the responsibility to maintain and extend two Escenic products: Demo Kit and Widget Framework. This involved lots of JSP and web development. From time to time, I also had to work on Linux administration and shell scripting."
   }, {
     "employer": "Sandstone Technology",
     "title": "Software Developer",
     "location": "Sydney, Australia",
     "dates": "July 2013 - Present",
-    "description": "I am currently working for Sandstone Technology as a Java developer."
+    "description": "I am currently working for Sandstone Technology as a Java developer. I have worked as one of the key developers in BankFast Portal project, which integrates BankFast with Liferay. Apart from this, I have also worked in several client-driven projects. For example, I was involved in Warehouse project, which focused on implementing a banking portal for the Warehouse group."
   }],
   "display": displayWorkExperience
 };
