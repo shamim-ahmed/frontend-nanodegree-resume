@@ -179,6 +179,10 @@ a {
   background-color: #e0dbdb;
 }
 
+.image-container {
+  text-align: center;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }

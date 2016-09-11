@@ -194,13 +194,14 @@ function displayProjects() {
     var projectDescription = HTMLprojectDescription.replace("%data%", project.description);
 
     var projectEntry = $(".project-entry:last", projectsElem);
-    projectEntry.append(projectTitle).append(projectDates).append(projectDescription);
+    projectEntry.append(projectTitle).append(projectDates).append(projectDescription).append(HTMLprojectImageContainer);
 
+    var imageContainer = $(".image-container", projectEntry);
     var j;
 
     for (j = 0; j < project.images.length; j++) {
       var projectImage = HTMLprojectImage.replace("%data%", project.images[j]);
-      projectEntry.append(projectImage);
+      imageContainer.append(projectImage);
     }
   }
 
