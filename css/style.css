@@ -73,6 +73,7 @@ h5 {
   color: #1199c3;
   line-height: 16px;
   float: left;
+  margin-top: 3px;
 }
 
 .location-text {
@@ -81,6 +82,7 @@ h5 {
   color: #1199c3;
   line-height: 16px;
   float: right;
+  margin-top: 3px;
 }
 
 p {
