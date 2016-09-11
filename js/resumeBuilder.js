@@ -241,7 +241,12 @@ function displayAcademicQualifications() {
     var onlineTitle = HTMLonlineTitle.replace("#", onlineCourse.url).replace("%data%", onlineCourse.title);
     var onlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
     var onlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
-    $(".education-entry:last", educationElem).append(onlineTitle + onlineSchool).append(onlineDates).append("<br>");
+    var onlineCourseEntry = $(".education-entry:last", educationElem);
+    onlineCourseEntry.append(onlineTitle + onlineSchool).append(onlineDates).append("<br>");
+
+    if (i === 0) {
+      onlineCourseEntry.addClass("first-online-course");
+    }
   }
 }
 

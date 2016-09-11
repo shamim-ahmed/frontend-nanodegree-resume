@@ -31,6 +31,14 @@ h6 {
   margin-top: 0;
 }
 
+.education-entry em {
+  font-size: 13px;
+}
+
+#education .first-online-course {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 40px;
   color: #f5a623;
