@@ -113,11 +113,9 @@ function displayBiographicalInfo() {
 
   var loc = HTMLlocation.replace("%data%", bio.contacts.location);
 
-  var topContactsElem = $("#topContacts");
-  var footerContactsElem = $("#footerContacts");
   var elemArray = [];
-  elemArray.push(topContactsElem);
-  elemArray.push(footerContactsElem);
+  elemArray.push($("#topContacts"));
+  elemArray.push($("#footerContacts"));
   var i;
 
   for (i = 0; i < elemArray.length; i++) {
@@ -130,7 +128,7 @@ function displayBiographicalInfo() {
 
     containerElem.append(loc);
   }
-  
+
   /* biopic and welcome message */
   var biopic = HTMLbioPic.replace("%data%", bio.biopic);
   var welcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -140,9 +138,8 @@ function displayBiographicalInfo() {
   /* skill set */
   if (bio.skills.length > 0) {
     headerElem.append(HTMLskillsStart);
-
+    
     var skillListElem = $("#skills");
-    var i;
 
     for (i = 0; i < bio.skills.length; i++) {
       var skill = HTMLskills.replace("%data%", bio.skills[i]);
