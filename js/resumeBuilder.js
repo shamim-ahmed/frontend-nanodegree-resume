@@ -101,7 +101,7 @@ function displayBiographicalInfo() {
   headerElem.prepend(headerRole);
   headerElem.prepend(headerName);
 
-  /* contact details */
+  /* contact details at the top */
   var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var email = HTMLemail.replace("%data%", bio.contacts.email);
   var github = HTMLgithub.replace("%data%", bio.contacts.github);
@@ -112,15 +112,25 @@ function displayBiographicalInfo() {
   }
 
   var loc = HTMLlocation.replace("%data%", bio.contacts.location);
+
   var topContactsElem = $("#topContacts");
-  topContactsElem.append(mobile).append(email).append(github);
+  var footerContactsElem = $("#footerContacts");
+  var elemArray = [];
+  elemArray.push(topContactsElem);
+  elemArray.push(footerContactsElem);
+  var i;
 
-  if (twitter !== null) {
-    topContactsElem.append(twitter);
+  for (i = 0; i < elemArray.length; i++) {
+    var containerElem = elemArray[i];
+    containerElem.append(mobile).append(email).append(github);
+
+    if (twitter !== null) {
+      containerElem.append(twitter);
+    }
+
+    containerElem.append(loc);
   }
-
-  topContactsElem.append(loc);
-
+  
   /* biopic and welcome message */
   var biopic = HTMLbioPic.replace("%data%", bio.biopic);
   var welcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
