@@ -14,7 +14,7 @@ var bio = {
     "location": "Sydney, Australia"
   },
   "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
-  "skills": ["Java", "J2EE", "Python", "HTML5/CSS3", "JavaScript"],
+  "skills": ["Java", "J2EE", "Python", "HTML5", "JavaScript"],
   "biopic": "images/shamim.png",
   "display": displayBiographicalInfo
 };
@@ -239,7 +239,6 @@ function displayAcademicQualifications() {
 }
 
 function displayMap() {
-  var googleMapApiKey = "AIzaSyArATM9PDyhwaB3tH18smKnmxI6OsrP7MM";
   $("#mapDiv").append(googleMap);
 }
 
