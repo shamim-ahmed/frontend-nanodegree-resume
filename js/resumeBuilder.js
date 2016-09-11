@@ -135,7 +135,7 @@ function displayBiographicalInfo() {
   headerElem.append(biopic).append(welcomeMessage);
 
   /* skill set */
-  if (bio.skills != null && bio.skills.length > 0) {
+  if (bio.skills !== null && bio.skills.length > 0) {
     headerElem.append(HTMLskillsStart);
 
     var skillListElem = $("#skills");
@@ -144,7 +144,7 @@ function displayBiographicalInfo() {
     for (i = 0; i < bio.skills.length; i++) {
       var skill = HTMLskills.replace("%data%", bio.skills[i]);
       skillListElem.append(skill);
-    }  
+    }
   }
 }
 
