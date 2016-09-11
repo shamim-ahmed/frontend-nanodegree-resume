@@ -63,7 +63,7 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #1199c3;
   line-height: 16px;
   float: left;
 }
@@ -71,7 +71,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #1199c3;
   line-height: 16px;
   float: right;
 }
@@ -83,7 +83,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #3566e0;
   text-decoration: none;
   margin-top: 10px;
   display: block;
