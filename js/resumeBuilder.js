@@ -117,7 +117,7 @@ function displayBiographicalInfo() {
   headerElem.append(biopic).append(welcomeMessage);
 
   /* skill set */
-  if (bio.skills !== null && bio.skills.length > 0) {
+  if (bio.skills.length > 0) {
     headerElem.append(HTMLskillsStart);
 
     var skillListElem = $("#skills");
