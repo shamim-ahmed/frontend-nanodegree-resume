@@ -220,7 +220,6 @@ function displayAcademicQualifications() {
     var onlineTitle = HTMLonlineTitle.replace("#", onlineCourse.url).replace("%data%", onlineCourse.title);
     var onlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
     var onlineDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
-    var onlineUrl = HTMLonlineURL.replace("#", onlineCourse.url).replace("%data%", onlineCourse.url);
     $(".education-entry:last", educationElem).append(onlineTitle + onlineSchool).append(onlineDates).append("<br>");
   }
 }
@@ -229,23 +228,7 @@ function displayMap() {
   $("#mapDiv").append(googleMap);
 }
 
-function inName(name) {
-  var nameComponents = name.split(/[ ]/);
-
-  if (nameComponents.length != 2) {
-    return name;
-  }
-
-  var firstName = nameComponents[0];
-  var lastName = nameComponents[1];
-
-  firstName = firstName.slice(0, 1).toUpperCase() + firstName.slice(1);
-  lastName = lastName.toUpperCase();
-
-  var result = firstName + " " + lastName;
-  return result;
-}
-
+/* This is where we invoke various functions */
 bio.display();
 work.display();
 projects.display();
