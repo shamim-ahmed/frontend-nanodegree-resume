@@ -168,6 +168,7 @@ function displayProjects() {
     projectEntry.append(projectTitle).append(projectDates).append(projectDescription);
 
     var j;
+
     for (j = 0; j < project.images.length; j++) {
       var projectImage = HTMLprojectImage.replace("%data%", project.images[j]);
       projectEntry.append(projectImage);
@@ -197,12 +198,13 @@ function displayAcademicQualifications() {
     }
 
     var n = majorStr.length;
+
     if (n > 0) {
       majorStr = majorStr.slice(0, n - 2);
     }
 
     var schoolMajor = HTMLschoolMajor.replace("%data%", majorStr);
-
+    
     var educationEntry = $(".education-entry:last", educationElem);
     educationEntry.append(schoolName + schoolDegree).append(schoolDates).append(schoolLocation).append(schoolMajor);
   }
