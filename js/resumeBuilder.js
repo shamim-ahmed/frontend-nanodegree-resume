@@ -244,8 +244,30 @@ function displayMap() {
   $("#mapDiv").append(googleMap);
 }
 
+function displayInternationalizeButton() {
+  $("#main").append(internationalizeButton);
+}
+
+function inName(name) {
+  var nameComponents = name.split(/[ ]/);
+
+  if (nameComponents.length != 2) {
+    return name;
+  }
+
+  var firstName = nameComponents[0];
+  var lastName = nameComponents[1];
+
+  firstName = firstName.slice(0, 1).toUpperCase() + firstName.slice(1);
+  lastName = lastName.toUpperCase();
+  
+  var result = firstName + " " + lastName;
+  return result;
+}
+
 bio.display();
 work.display();
 projects.display();
 education.display();
 displayMap();
+displayInternationalizeButton();
