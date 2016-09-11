@@ -105,10 +105,21 @@ function displayBiographicalInfo() {
   var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var email = HTMLemail.replace("%data%", bio.contacts.email);
   var github = HTMLgithub.replace("%data%", bio.contacts.github);
-  var twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-  var loc = HTMLlocation.replace("%data%", bio.contacts.location);
+  var twitter = null;
 
-  $("#topContacts").append(mobile).append(email).append(github).append(twitter).append(loc);
+  if (bio.contacts.twitter) {
+    twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  }
+
+  var loc = HTMLlocation.replace("%data%", bio.contacts.location);
+  var topContactsElem = $("#topContacts");
+  topContactsElem.append(mobile).append(email).append(github);
+
+  if (twitter !== null) {
+    topContactsElem.append(twitter);
+  }
+
+  topContactsElem.append(loc);
 
   /* biopic and welcome message */
   var biopic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -204,7 +215,7 @@ function displayAcademicQualifications() {
     }
 
     var schoolMajor = HTMLschoolMajor.replace("%data%", majorStr);
-    
+
     var educationEntry = $(".education-entry:last", educationElem);
     educationEntry.append(schoolName + schoolDegree).append(schoolDates).append(schoolLocation).append(schoolMajor);
   }
