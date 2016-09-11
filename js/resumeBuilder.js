@@ -244,10 +244,6 @@ function displayMap() {
   $("#mapDiv").append(googleMap);
 }
 
-function displayInternationalizeButton() {
-  $("#main").append(internationalizeButton);
-}
-
 function inName(name) {
   var nameComponents = name.split(/[ ]/);
 
@@ -260,7 +256,7 @@ function inName(name) {
 
   firstName = firstName.slice(0, 1).toUpperCase() + firstName.slice(1);
   lastName = lastName.toUpperCase();
-  
+
   var result = firstName + " " + lastName;
   return result;
 }
@@ -270,4 +266,3 @@ work.display();
 projects.display();
 education.display();
 displayMap();
-displayInternationalizeButton();
