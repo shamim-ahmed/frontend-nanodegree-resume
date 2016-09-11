@@ -10,7 +10,7 @@ var bio = {
     "location": "Sydney, Australia"
   },
   "welcomeMessage": "Hi there! Thanks for your interest in my resume.",
-  "skills": ["Java", "J2EE", "Python", "HTML5", "JavaScript"],
+  "skills": ["Java", "J2EE", "Python", "HTML5", "JavaScript", "Spring"],
   "biopic": "images/shamim.png",
   "display": displayBiographicalInfo
 };
@@ -138,12 +138,16 @@ function displayBiographicalInfo() {
   /* skill set */
   if (bio.skills.length > 0) {
     headerElem.append(HTMLskillsStart);
-    
+
     var skillListElem = $("#skills");
 
     for (i = 0; i < bio.skills.length; i++) {
       var skill = HTMLskills.replace("%data%", bio.skills[i]);
       skillListElem.append(skill);
+    }
+
+    if (bio.skills.length > 5) {
+      skillListElem.removeClass("flex-column").addClass("flex-row");
     }
   }
 }

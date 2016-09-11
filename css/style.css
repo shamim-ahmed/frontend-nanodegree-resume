@@ -145,6 +145,20 @@ a {
   padding: 10px;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-row .flex-item {
+  margin: 0 5px;
+}
+
+.flex-row .flex-item:first-of-type {
+  margin-left: 0;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
@@ -173,7 +187,6 @@ span {
 }
 
 /* Media queries to handle various device widths */
-
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
