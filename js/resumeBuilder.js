@@ -171,6 +171,13 @@ function displayWorkExperience() {
     var workEntryElem = $(".work-entry:last", workExperienceElem);
     workEntryElem.append(employerInfo).append(workDates).append(loc).append(description);
   }
+
+  // some additional style during mouse hover
+  $(".work-entry").hover(function() {
+    $(this).addClass("item-selected");
+  }, function() {
+    $(this).removeClass("item-selected");
+  });
 }
 
 function displayProjects() {
@@ -196,6 +203,13 @@ function displayProjects() {
       projectEntry.append(projectImage);
     }
   }
+
+  // some additional style during mouse hover
+  $(".project-entry").hover(function() {
+    $(this).addClass("item-selected");
+  }, function() {
+    $(this).removeClass("item-selected");
+  });
 }
 
 function displayAcademicQualifications() {
@@ -248,6 +262,13 @@ function displayAcademicQualifications() {
       onlineCourseEntry.addClass("first-online-course");
     }
   }
+
+  // some additional style during mouse hover
+  $(".education-entry").hover(function() {
+    $(this).addClass("item-selected");
+  }, function() {
+    $(this).removeClass("item-selected");
+  });
 }
 
 function displayMap() {

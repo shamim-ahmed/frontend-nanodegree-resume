@@ -175,6 +175,10 @@ a {
   margin-left: 0;
 }
 
+.item-selected {
+  background-color: #e0dbdb;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
