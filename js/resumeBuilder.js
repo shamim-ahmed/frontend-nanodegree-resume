@@ -135,14 +135,16 @@ function displayBiographicalInfo() {
   headerElem.append(biopic).append(welcomeMessage);
 
   /* skill set */
-  headerElem.append(HTMLskillsStart);
+  if (bio.skills != null && bio.skills.length > 0) {
+    headerElem.append(HTMLskillsStart);
 
-  var skillListElem = $("#skills");
-  var i;
+    var skillListElem = $("#skills");
+    var i;
 
-  for (i = 0; i < bio.skills.length; i++) {
-    var skill = HTMLskills.replace("%data%", bio.skills[i]);
-    skillListElem.append(skill);
+    for (i = 0; i < bio.skills.length; i++) {
+      var skill = HTMLskills.replace("%data%", bio.skills[i]);
+      skillListElem.append(skill);
+    }  
   }
 }
 
